@@ -1,0 +1,10 @@
+[
+ {
+   "name": "EMPID",
+   "type": "string"
+ },
+ {
+   "name": "EMPNAME",
+   "type": "string"
+ }
+]
