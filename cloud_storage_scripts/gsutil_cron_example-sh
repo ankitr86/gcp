@@ -1,0 +1,13 @@
+#! /bin/bash
+
+# Replace "/path/to/gsutil/" with the path of your gsutil installation.
+PATH="$PATH":/path/to/gsutil/
+
+# Replace "/home/username/" with the path of your home directory in Linux/Mac.
+# The ".boto" file contains the settings that helps you connect to Google Cloud Storage.
+export BOTO_CONFIG="/home/username/.boto"
+
+# A simple gsutil command that returns a list of files/folders in your bucket.
+# Replace "yourbucketname" with a bucket name from your Google Cloud Storage.
+# You can replace this line with your own gsutil command to upload a file, etc.
+gsutil ls -l gs://yourbucketname
