@@ -1,0 +1,8 @@
+To automate the sync process use cron job:
+
+Create a script to run with cron $ nano backup.sh
+Paste your gsutil command in the script $ gsutil -m rsync -d -r [Source_PATH] gs://bucket-name
+Make the script executable $ chmod +x backup.sh
+Based on your use case, put the shell script (backup.sh) in one of the below folders: a) /etc/cron.daily b) /etc/cron.hourly c) /etc/cron.monthly d) /etc/cron.weekly
+If you want to run this script for a specific time then go to the terminal and type: $ crontab -e
+Then simply call out the script with cron as often as you want, for example, in midnight: 00 00 * * * /path/to/your/backup.sh
